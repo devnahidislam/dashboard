@@ -1,5 +1,7 @@
-.home{
-  h2{
-    background-color: aqua;
+.home {
+  display: flex;
+
+  .homeContainer {
+    flex: 5;
   }
 }
