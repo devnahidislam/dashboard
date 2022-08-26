@@ -186,7 +186,7 @@ const List = () => {
       </TableContainer>
       <TablePagination
         rowsPerPageOptions={[6, 10, 25, 100]}
-        // component="div"
+        component="div"
         count={rows.length}
         rowsPerPage={rowsPerPage}
         page={page}
