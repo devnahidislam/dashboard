@@ -10,67 +10,77 @@ import NotificationsNoneOutlinedIcon from '@mui/icons-material/NotificationsNone
 import InsertChartIcon from '@mui/icons-material/InsertChart';
 import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Dev NiN</span>
+        <Link to="/">
+          <span className="logo">Dev NiN</span>
+        </Link>
       </div>
 
       <hr />
 
       <div className="center">
         <ul>
-          
           <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <span>Dashboard</span>
-          </li>
+          <Link to="/">
+            <li className="sidebtn">
+              <DashboardIcon className="icon" />
+              <span>Dashboard</span>
+            </li>
+          </Link>
 
           <p className="title">LIST</p>
-          <li>
-            <PersonOutlineIcon className="icon" />
-            <span>Users</span>
-          </li>
-          <li>
-            <CreditCardOutlinedIcon className="icon" />
-            <span>Orders</span>
-          </li>
-          <li>
-            <StoreIcon className="icon" />
-            <span>Products</span>
-          </li>
-          <li>
+          <Link to="/users">
+            <li className="sidebtn ">
+              <PersonOutlineIcon className="icon" />
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link to="/products">
+            <li className="sidebtn">
+              <CreditCardOutlinedIcon className="icon" />
+              <span>Orders</span>
+            </li>
+          </Link>
+          <Link to="/products">
+            <li className="sidebtn">
+              <StoreIcon className="icon" />
+              <span>Products</span>
+            </li>
+          </Link>
+          <li className="sidebtn">
             <LocalShippingOutlinedIcon className="icon" />
             <span>Delivery</span>
           </li>
 
           <p className="title">USEFULL</p>
-          <li>
+          <li className="sidebtn">
             <InsertChartIcon className="icon" />
             <span>Status</span>
           </li>
-          <li>
+          <li className="sidebtn">
             <NotificationsNoneOutlinedIcon className="icon" />
             <span>Notification</span>
           </li>
-          <li>
+          <li className="sidebtn">
             <PsychologyOutlinedIcon className="icon" />
             <span>Logs</span>
           </li>
 
           <p className="title">USER</p>
-          <li>
+          <li className="sidebtn">
             <SettingsApplicationsOutlinedIcon className="icon" />
             <span>Settings</span>
           </li>
-          <li>
+          <li className="sidebtn">
             <AccountCircleOutlinedIcon className="icon" />
             <span>Prifile</span>
           </li>
-          <li>
+          <li className="sidebtn">
             <ExitToAppOutlinedIcon className="icon" />
             <span>Logout</span>
           </li>

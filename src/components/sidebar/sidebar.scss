@@ -33,8 +33,7 @@
         font-weight: bold;
         margin: 10px 0 5px 0;
       }
-
-      li {
+      .sidebtn {
         display: flex;
         align-items: center;
         padding: 5px;
@@ -44,7 +43,7 @@
         cursor: pointer;
         transition: .2s;
 
-        &:hover {
+        &.active, &:hover {
           background-color: #ece8ff;
         }
 

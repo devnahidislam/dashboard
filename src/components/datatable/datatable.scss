@@ -2,6 +2,31 @@
   height: 620px;
   padding: 20px;
 
+  .dataTableTitle {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 10px;
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      background: teal;
+      color: #fcfcfc;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.1s;
+
+      &:hover {
+        background: rgba(0, 128, 128, 0.753);
+      }
+    }
+  }
+
   .cellWithImg {
     display: flex;
     align-items: center;
@@ -19,43 +44,44 @@
     padding: 5px;
     border-radius: 5px;
 
-    &.active{
+    &.active {
       color: green;
       background-color: rgb(0, 128, 0, 0.151);
     }
-    &.passive{
+    &.passive {
       color: goldenrod;
       background-color: rgb(189, 189, 3, 0.151);
     }
   }
 
-  .cellAction{
+  .cellAction {
     display: flex;
     align-items: center;
     gap: 15px;
 
-    .viewBtn, .deleteBtn{
+    .viewBtn,
+    .deleteBtn {
       padding: 2px 5px;
       border-radius: 5px;
       font-weight: bold;
       cursor: pointer;
-      transition: .1s;
+      transition: 0.1s;
     }
-    .viewBtn{
+    .viewBtn {
       color: darkblue;
       border: 1px dotted darkblue;
 
-      &:hover{
-        background-color: rgba(0, 0, 139, 0.600);
+      &:hover {
+        background-color: rgba(0, 0, 139, 0.6);
         color: whitesmoke;
       }
     }
-    .deleteBtn{
+    .deleteBtn {
       color: crimson;
       border: 1px dotted crimson;
 
-      &:hover{
-        background-color: rgba(220, 20, 60, 0.600);
+      &:hover {
+        background-color: rgba(220, 20, 60, 0.6);
         color: whitesmoke;
       }
     }
