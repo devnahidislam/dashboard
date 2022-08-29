@@ -5,14 +5,14 @@ import './list.scss';
 
 const List = () => {
   return (
-    <div className='list'>
+    <div className="list">
       <Sidebar />
       <div className="listContainer">
         <Navbar />
         <Datatable />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default List
+export default List;

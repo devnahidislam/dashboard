@@ -17,7 +17,9 @@ const List = () => {
     setPage(newPage);
   };
 
-  const handleChangeRowsPerPage = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChangeRowsPerPage = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     setRowsPerPage(+event.target.value);
     setPage(0);
   };
@@ -160,27 +162,29 @@ const List = () => {
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage).map((row) => (
-              <TableRow
-                key={row.id}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-              >
-                <TableCell>{row.id}</TableCell>
-                <TableCell className="tableCell">
-                  <div className="cellWraper">
-                    <img src={row.img} alt="" className="image" />
-                    {row.product}
-                  </div>
-                </TableCell>
-                <TableCell className="tableCell">{row.customer}</TableCell>
-                <TableCell className="tableCell">{row.date}</TableCell>
-                <TableCell className="tableCell">${row.amount}</TableCell>
-                <TableCell className="tableCell">{row.method}</TableCell>
-                <TableCell className="tableCell">
-                  <span className={`status ${row.status}`}>{row.status}</span>
-                </TableCell>
-              </TableRow>
-            ))}
+            {rows
+              .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+              .map((row) => (
+                <TableRow
+                  key={row.id}
+                  sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                >
+                  <TableCell className="tableCell">{row.id}</TableCell>
+                  <TableCell className="tableCell">
+                    <div className="cellWraper">
+                      <img src={row.img} alt="" className="image" />
+                      {row.product}
+                    </div>
+                  </TableCell>
+                  <TableCell className="tableCell">{row.customer}</TableCell>
+                  <TableCell className="tableCell">{row.date}</TableCell>
+                  <TableCell className="tableCell">${row.amount}</TableCell>
+                  <TableCell className="tableCell">{row.method}</TableCell>
+                  <TableCell className="tableCell">
+                    <span className={`status ${row.status}`}>{row.status}</span>
+                  </TableCell>
+                </TableRow>
+              ))}
           </TableBody>
         </Table>
       </TableContainer>
@@ -192,6 +196,12 @@ const List = () => {
         page={page}
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
+        sx={{
+          '.MuiTablePagination-toolbar': {
+            backgroundColor: 'rgb(126, 126, 126)',
+            color: '#f1f2f6',
+          },
+        }}
       />
     </Paper>
   );
