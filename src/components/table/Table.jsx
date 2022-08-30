@@ -196,12 +196,12 @@ const List = () => {
         page={page}
         onPageChange={handleChangePage}
         onRowsPerPageChange={handleChangeRowsPerPage}
-        sx={{
-          '.MuiTablePagination-toolbar': {
-            backgroundColor: 'rgb(126, 126, 126)',
-            color: '#f1f2f6',
-          },
-        }}
+        // sx={{
+        //   '.MuiTablePagination-toolbar': {
+        //     backgroundColor: 'rgb(126, 126, 126)',
+        //     color: '#f1f2f6',
+        //   },
+        // }}
       />
     </Paper>
   );

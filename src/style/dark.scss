@@ -85,12 +85,21 @@
         color: azure;
       }
     }
+    //List table custom css
     .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar{
       color: azure;
     }
-    .css-zylse7-MuiButtonBase-root-MuiIconButton-root.Mui-disabled{
+    .css-zylse7-MuiButtonBase-root-MuiIconButton-root{
       color: rgb(196, 196, 196);
     }
+    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root{
+      color:lightgray;
+    }
+  }
+
+  .css-jtlhu6-MuiTablePagination-root{
+    background-color: #333;
+    color: azure;
   }
 
   .newContainer{
